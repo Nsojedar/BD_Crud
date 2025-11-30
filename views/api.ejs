@@ -1,0 +1,11 @@
+<h1>Usuarios desde API</h1>
+
+<div class="users-grid">
+    <% users.forEach(user => { %>
+        <div class="user-card">
+            <h3><%= user.name %></h3>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Teléfono:</strong> <%= user.phone %></p>
+        </div>
+    <% }) %>
+</div>

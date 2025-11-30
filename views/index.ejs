@@ -1,0 +1,18 @@
+<h1>Listado de Items</h1>
+
+<form method="get" action="/">
+    <input type="text" name="q" placeholder="Buscar..." value="<%= q %>">
+    <button type="submit">Buscar</button>
+</form>
+
+<ul>
+    <% items.forEach(item => { %>
+        <li>
+            <strong><%= item.Title %></strong><br>
+            <%= item.Body %><br>
+
+            <a href="/edit/<%= item.Id %>">Editar</a>
+            <a href="/delete/<%= item.Id %>" style="color:red;">Eliminar</a>
+        </li>
+    <% }) %>
+</ul>

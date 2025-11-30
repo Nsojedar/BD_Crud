@@ -1,0 +1,13 @@
+
+
+<h1>Editar Item</h1>
+
+<form action="/edit/<%= item.Id %>" method="POST">
+    <label>Título:</label>
+    <input type="text" name="title" value="<%= item.Title %>" required>
+
+    <label>Cuerpo:</label>
+    <textarea name="body"><%= item.Body %></textarea>
+
+    <button>Actualizar</button>
+</form>
